@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .recherche {
   display: flex;
   justify-content: center;
@@ -25,4 +26,38 @@
   color: black;
   background-color: #EAEAEA;
   margin-right: 0;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+}
+.footer__logo {
+  font-family: Shrikhand, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+}
+.footer__liens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 97px;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.footer__liens li {
+  list-style-type: none;
+}
+.footer__liens li i {
+  width: 11px; /*pour gérer l'alignement avec le texte*/
+  margin-right: 10px;
+}
+.footer__liens li a {
+  text-decoration: none;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

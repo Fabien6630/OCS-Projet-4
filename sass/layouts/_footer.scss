@@ -1,0 +1,38 @@
+.footer {
+    background-color: $couleur-quaternaire;
+    color: white;
+    padding: 22px 25px;
+
+    &__logo {
+        font-family: Shrikhand, sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    &__liens {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 97px;
+        font-weight: 500;
+        font-size: 16px;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style-type: none;
+
+            i {
+                width: 11px; /*pour gérer l'alignement avec le texte*/
+                margin-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
