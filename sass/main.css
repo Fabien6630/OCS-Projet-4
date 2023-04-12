@@ -1,0 +1,28 @@
+.recherche {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #353535;
+  background-color: #EAEAEA;
+  /*height: 50px;*/
+  padding: 15px 0;
+}
+.recherche__icone-localisation {
+  margin-right: 17px;
+}
+.recherche__input {
+  border: none;
+  color: black;
+  padding: 0;
+  width: 95px;
+}
+.recherche__input::-moz-placeholder {
+  color: black;
+  background-color: #EAEAEA;
+  margin-right: 0;
+}
+.recherche__input::placeholder {
+  color: black;
+  background-color: #EAEAEA;
+  margin-right: 0;
+}/*# sourceMappingURL=main.css.map */
