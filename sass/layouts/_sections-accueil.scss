@@ -1,0 +1,28 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: var(--couleur-de-fond-primaire);
+    padding: 39px 0 57px 0;
+
+        p {
+            font-weight: 300;
+            font-size: 18px;
+            color: var(--couleur-quaternaire);
+            margin: 10px 0 27px 0;
+        }
+
+        &__bouton {
+            width: 220px;
+            height: 50px;
+            border-radius: 25px;
+            border: none;
+            color: white;
+            background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+            /*background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);*/ /*PAS LE BON LINEAR GRADIENT)*/
+            background: linear-gradient();
+            margin: auto;
+            font-weight: 500;
+            font-size: 16px;
+        }
+}
