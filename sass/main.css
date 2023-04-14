@@ -12,19 +12,10 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-h1 {
-  font-weight: 700;
-  font-size: 24px;
-  margin: 0;
-}
-
 .conteneur-principal {
   max-width: 767px;
 }
 
-.header {
-  width: 100%;
-}
 .header__logo {
   font-family: Shrikhand, sans-serif;
   font-style: italic;
@@ -32,33 +23,146 @@ h1 {
   font-size: 30px;
   text-align: center;
   padding: 14px 0 5px 0;
+  margin: 0;
 }
 
-.introduction {
+.accueil h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.section-introduction {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background: var(--couleur-de-fond-primaire);
+  background: #F7F7F7;
   padding: 39px 0 57px 0;
 }
-.introduction p {
+.section-introduction p {
   font-weight: 300;
   font-size: 18px;
-  color: var(--couleur-quaternaire);
+  color: #353535;
   margin: 10px 0 27px 0;
 }
-.introduction__bouton {
+.section-introduction__bouton {
   width: 220px;
   height: 50px;
   border-radius: 25px;
   border: none;
   color: white;
   background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  /*background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);*/ /*PAS LE BON LINEAR GRADIENT)*/
-  background: linear-gradient();
   margin: auto;
   font-weight: 500;
   font-size: 16px;
+  cursor: pointer;
+}
+
+.section-fonctionnement {
+  padding: 43px 20px;
+  margin-bottom: 18px;
+}
+.section-fonctionnement h2 {
+  margin: 5px 0 26px 0;
+}
+.section-fonctionnement__instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+}
+.section-fonctionnement__instructions__instruction {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  background-color: #F7F7F7;
+  border-radius: 20px;
+  margin-left: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.section-fonctionnement__instructions__instruction p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356DC;
+  /*font-weight: 500;                    est-ce utile????
+  font-size: 14px;*/
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  position: relative;
+  left: -12px;
+}
+.section-fonctionnement__instructions__instruction i {
+  padding: 0 23px 0 34px;
+  color: #7E7E7E;
+}
+.section-fonctionnement__instructions__instruction h3 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.section-restaurants {
+  padding: 50px 15px;
+  background-color: #F7F7F7;
+}
+.section-restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.section-restaurants h2 {
+  margin: 4px 0 25px 0;
+}
+.section-restaurants .carte {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.section-restaurants .carte__image {
+  position: relative;
+}
+.section-restaurants .carte__image img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+.section-restaurants .carte__image .etiquette {
+  background-color: #99E2D0;
+  color: #008766;
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 7px 9px 6px 9px;
+}
+.section-restaurants .carte__contenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 77px;
+  border-radius: 0 0 15px 15px;
+  padding: 0 25px 0 13px;
+}
+.section-restaurants .carte__contenu__texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.section-restaurants .carte__contenu__texte h3 {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+.section-restaurants .carte__contenu__texte p {
+  font-weight: 300;
+  font-size: 17px;
+  margin: 0;
 }
 
 .recherche {
@@ -67,8 +171,8 @@ h1 {
   align-items: center;
   color: #353535;
   background-color: #EAEAEA;
-  /*height: 50px;*/
   padding: 15px 0;
+  /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); fonctionne mal*/
 }
 .recherche__icone-localisation {
   margin-right: 17px;
@@ -77,17 +181,21 @@ h1 {
   border: none;
   color: black;
   padding: 0;
-  width: 95px;
+  width: 108px;
 }
 .recherche__input::-moz-placeholder {
   color: black;
   background-color: #EAEAEA;
   margin-right: 0;
+  font-weight: 500;
+  font-size: 16px;
 }
 .recherche__input::placeholder {
   color: black;
   background-color: #EAEAEA;
   margin-right: 0;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .footer {

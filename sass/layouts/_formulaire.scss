@@ -4,23 +4,24 @@
     align-items: center;
     color: $couleur-quaternaire;
     background-color: $couleur-de-fond-secondaire;
-    /*height: 50px;*/
     padding: 15px 0;
-
+    /*box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); fonctionne mal*/
     &__icone-localisation {
-        margin-right: 17px; 
+    margin-right: 17px; 
     }
 
     &__input {
         border: none;
         color: black;
         padding: 0;
-        width: 95px;
+        width: 108px;
 
         &::placeholder {
             color: black;
             background-color: $couleur-de-fond-secondaire;
             margin-right: 0;
+            font-weight: 500;
+            font-size: 16px;
         }
     }
     
