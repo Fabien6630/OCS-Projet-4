@@ -1,11 +1,24 @@
-.header {
-    &__logo {
-        font-family: Shrikhand, sans-serif;
-        font-style: italic;
-        font-weight: 400;
-        font-size: 30px;
-        text-align: center;
-        padding: 14px 0 5px 0;
-        margin: 0;
+header {
+    
+    .bloc-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 14px 23px 5px 23px;
+
+        h1 {
+            width: 100%;
+            font-family: Shrikhand, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 30px;
+            text-align: center;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 }
