@@ -1,7 +1,7 @@
 .footer {
     background-color: $couleur-quaternaire;
     color: white;
-    padding: 22px 25px;
+    padding: 22px 25px 15px 25px;
 
     &__logo {
         font-family: Shrikhand, sans-serif;
@@ -14,8 +14,6 @@
     &__liens {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 97px;
         font-weight: 500;
         font-size: 16px;
         padding-left: 0;
@@ -23,6 +21,7 @@
 
         li {
             list-style-type: none;
+            padding-bottom: 7px;
 
             i {
                 width: 11px; /*pour gérer l'alignement avec le texte*/
