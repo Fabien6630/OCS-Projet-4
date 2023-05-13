@@ -198,14 +198,14 @@
                         }
                     }*/
                     span {
-                        background-image: url('../../assets/images/coeur-vide.png');
+                        background-image: url('../assets/images/coeur-vide.png');
                         width: 23px;
                         height: 23px;
                         background-repeat: no-repeat;
                         background: 1px solid;
                         
                         &:hover {
-                            background-image: url('../../assets/images/coeur-plein.png');
+                            background-image: url('../assets/images/coeur-plein.png');
                             transform: scale(1.2);
                         }
                     }

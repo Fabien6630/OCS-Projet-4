@@ -320,14 +320,14 @@ header .bloc-logo a {
   margin: 0;
 }
 .section-restaurants .bloc-restaurants a .carte__contenu span {
-  background-image: url("../../assets/images/coeur-vide.png");
+  background-image: url("../assets/images/coeur-vide.png");
   width: 23px;
   height: 23px;
   background-repeat: no-repeat;
   background: 1px solid;
 }
 .section-restaurants .bloc-restaurants a .carte__contenu span:hover {
-  background-image: url("../../assets/images/coeur-plein.png");
+  background-image: url("../assets/images/coeur-plein.png");
   transform: scale(1.2);
 }
 
@@ -667,6 +667,26 @@ header .bloc-logo a {
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .bloc-menu .menu__etape {
     width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bloc-menu .menu__etape .article:hover .description {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .bloc-menu .menu__etape .article:hover .description {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bloc-menu .menu__etape .article:hover .plat {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .bloc-menu .menu__etape .article:hover .plat {
+    width: 90%;
   }
 }
 
