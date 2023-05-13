@@ -25,12 +25,33 @@
             border: none;
             color: white;
             background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+            /*background: $degrade-bouton;*/
+            /*transition: 300ms; /*NE FONCTIONNE PAS*/
             margin: auto;
             font-weight: 500;
             font-size: 16px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);        
             cursor: pointer;
+
+            &:hover {
+                /*background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%,(#FFFFFF) 15%);*/
+               background: linear-gradient(
+                    356deg,
+                    rgba(155, 89, 220, 1) 0%,
+                    rgba(167, 127, 216, 1) 33%,
+                    rgba(255, 121, 218, 1) 100%
+                );
+                box-shadow: 0px 2px 10px 0px #525252;
+            }
+                /*background: linear-gradient(
+                    180deg,
+                    lighten (rgba(255,121,218,1), 5%) 0%,
+                    lighten (rgba(147,86,220,1), 5%) 100%,
+                );
+                lighten($degrade-bouton, 5%);*/ 
         }
-}
+    }
+
 
 
 .section-fonctionnement {
@@ -59,6 +80,13 @@
                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
                 cursor: pointer;
 
+                &:hover {
+                    i {
+                        color: $couleur-primaire;
+                    }
+
+                }
+
                     p {
                         display: flex;
                         justify-content: center;
@@ -79,6 +107,7 @@
                         padding: 0 23px 0 34px;
                         color: #7E7E7E;
                     }
+
                     
                     h3 {                   
                         font-weight: 500;
@@ -97,8 +126,8 @@
     .bloc-restaurants {          
         a {
             text-decoration: none;
-            color: black
-        }
+            
+        
         
         h2 {
             margin: 4px 0 25px 0;
@@ -145,6 +174,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-around;
+                        color: black;
 
                         h3 {
                             font-weight: 700;
@@ -159,6 +189,28 @@
                         }
 
                     }
+
+                    /*i {
+                        font-size: 21px;
+                        .fa-solid {
+                            background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+                            color: red;                  
+                        }
+                    }*/
+                    span {
+                        background-image: url('../../assets/images/coeur-vide.png');
+                        width: 23px;
+                        height: 23px;
+                        background-repeat: no-repeat;
+                        background: 1px solid;
+                        
+                        &:hover {
+                            background-image: url('../../assets/images/coeur-plein.png');
+                            transform: scale(1.2);
+                        }
+                    }
+
+                }
                 }
         }
     }           

@@ -15,8 +15,10 @@
         background-color: $couleur-de-fond-primaire;
         padding: 32px 13px 40px 13px;
         position: relative;
-        bottom: 55px;
+        margin-top: -55px;
         border-radius: 55px 55px 0 0;
+        /*animation: translation 1s ease-in forwards;
+        transform: translateY(2s);*/
         
         &__titre {
             width: 100%;
@@ -26,6 +28,18 @@
             margin-bottom: 40px;
             padding-left: 4px;
             padding-right: 28px;
+            span {
+                background-image: url('../../assets/images/coeur-vide.png');
+                width: 23px;
+                height: 23px;
+                background-repeat: no-repeat;
+                background: 1px solid;
+                
+                &:hover {
+                    background-image: url('../../assets/images/coeur-plein.png');
+                    transform: scale(1.2);
+                }
+            }
 
             h1 {
                 font-family: Shrikhand, sans-serif;
@@ -33,12 +47,36 @@
                 font-size: 28px;
                 margin: 0;
                                
-            }           
+            }
+            
+            
         }
+        
 
         &__etape {
             width: 100%;
             margin-bottom: 28px;
+            
+                    
+                /*&:nth-child(1) {
+                    opacity: 0;
+                    animation: beginning 1s 0s forwards;
+
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    animation: beginning 1s 0.5s forwards;
+                }
+                &:nth-child(3) {
+                    opacity: 0;
+                    animation: beginning 1s 1s forwards;
+                }
+                &:nth-child(4) {
+                    opacity: 0;
+                    animation: beginning 1s 1.5s forwards;
+                }*/
+
+
             h2 {
                 font-weight: 300;
                 font-size: 16px;
@@ -47,23 +85,63 @@
                 padding-bottom: 8px;
                 border-bottom: 3px solid $couleur-de-fond-tertiaire;
                 margin-bottom: 12px;
+
             }
 
-            &__plat {
+            
+
+            article {
                 display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                margin-bottom: 12px;
-                border-radius: 15px;
                 background-color: white;
-                padding: 15px 12px;
+                margin-bottom: 12px;
+                border-radius: 15px;               
+                cursor: pointer;
+
+                &:nth-child(1) {
+                    opacity: 0;
+                    animation: beginning 1s 0s forwards;
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    animation: beginning 1s 0.5s forwards;
+                }
+                &:nth-child(3) {
+                    opacity: 0;
+                    animation: beginning 1s 1s forwards;
+                }
+                &:nth-child(4) {
+                    opacity: 0;
+                    animation: beginning 1s 1.5s forwards;
+                }*
+
+                &:hover {
+                    .description {
+                        width: 70%;
+                    }
+                    .selected {
+                        width: 80px;
+                        opacity: 1;
+                    }
+                }
+                
+                .plat {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    width: 100%;
+                    padding: 15px 12px;
+
 
                 .description {
+            
+                    white-space: nowrap;
 
                     h3 {
                         font-weight: 500;
                         font-size: 18px;
                         margin: 0 0 5px 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
 
                     }
 
@@ -71,6 +149,8 @@
                         font-weight: 300;
                         font-size: 15px;
                         margin: 0;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
 
@@ -79,7 +159,46 @@
                     font-size: 17px;
                     margin: 0;
                 }
-           }
+                
+            }
+            .selected {
+                width: 0;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $couleur-de-fond-tertiaire;
+                border-radius: 0 15px 15px 0;
+                transition: width 1s ease-in-out;
+
+                i {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+        @keyframes translation {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+            
+        }
+
+        @keyframes beginning {
+            from {
+                opacity: 0;                      
+            }
+
+            to {
+                opacity: 1;               
+            }
+            
         }
 
         .bloc-bouton {
@@ -93,13 +212,26 @@
                 border: none;
                 color: white;
                 background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+                /*background: linear-gradient(($couleur-primaire) 100%, ($couleur-secondaire) 100%);*/
                 margin: auto;
                 font-weight: 500;
                 font-size: 16px;
                 cursor: pointer;
+
+                &:hover {
+                    /*background: linear-gradient(($couleur-primaire) 100%, ($couleur-secondaire) 100%, (#FFFFFF) 15%);*/
+                    background: linear-gradient(
+                        356deg,
+                        rgba(155, 89, 220, 1) 0%,
+                        rgba(167, 127, 216, 1) 33%,
+                        rgba(255, 121, 218, 1) 100%
+                    );
+                    box-shadow: 0px 2px 10px 0px #525252;
+                }
             }
 
         }
         
     }
 }
+
