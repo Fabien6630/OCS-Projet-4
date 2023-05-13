@@ -415,6 +415,15 @@ header .bloc-logo a {
   margin-bottom: 12px;
   border-radius: 15px;
   cursor: pointer;
+  /*&:hover {
+          .description {
+              width: 70%;
+          }
+          .selected {
+              width: 80px;
+              opacity: 1;
+          }
+      }*/
 }
 .bloc-menu .menu__etape article:nth-child(1) {
   opacity: 0;
@@ -435,6 +444,9 @@ header .bloc-logo a {
 * .bloc-menu .menu__etape article:hover .description {
   width: 70%;
 }
+* .bloc-menu .menu__etape article:hover .plat {
+  width: 80%;
+}
 * .bloc-menu .menu__etape article:hover .selected {
   width: 80px;
   opacity: 1;
@@ -445,9 +457,11 @@ header .bloc-logo a {
   align-items: flex-end;
   width: 100%;
   padding: 15px 12px;
+  transition: width 1s ease-in-out;
 }
 .bloc-menu .menu__etape article .plat .description {
   white-space: nowrap;
+  transition: width 1s ease-in-out;
 }
 .bloc-menu .menu__etape article .plat .description h3 {
   font-weight: 500;
@@ -477,13 +491,15 @@ header .bloc-logo a {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   transition: width 1s ease-in-out;
-}
-.bloc-menu .menu__etape article .selected:hover .description {
-  width: 70%;
-}
-.bloc-menu .menu__etape article .selected:hover .selected {
-  width: 80px;
-  opacity: 1;
+  /*&:hover {
+      /*.description {
+          width: 70%;
+      }
+
+          width: 80px;
+          opacity: 1;
+
+  }*/
 }
 .bloc-menu .menu__etape article .selected i {
   color: white;
