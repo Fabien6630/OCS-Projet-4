@@ -363,14 +363,14 @@ header .bloc-logo a {
   padding-right: 28px;
 }
 .bloc-menu .menu__titre span {
-  background-image: url("../../assets/images/coeur-vide.png");
+  background-image: url("../assets/images/coeur-vide.png");
   width: 23px;
   height: 23px;
   background-repeat: no-repeat;
   background: 1px solid;
 }
 .bloc-menu .menu__titre span:hover {
-  background-image: url("../../assets/images/coeur-plein.png");
+  background-image: url("../assets/images/coeur-plein.png");
   transform: scale(1.2);
 }
 .bloc-menu .menu__titre h1 {
@@ -477,6 +477,13 @@ header .bloc-logo a {
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
   transition: width 1s ease-in-out;
+}
+.bloc-menu .menu__etape article .selected:hover .description {
+  width: 70%;
+}
+.bloc-menu .menu__etape article .selected:hover .selected {
+  width: 80px;
+  opacity: 1;
 }
 .bloc-menu .menu__etape article .selected i {
   color: white;
