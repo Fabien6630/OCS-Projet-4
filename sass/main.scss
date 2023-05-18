@@ -1,13 +1,15 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/base";
+
+
 
 @import "./layouts/loader";
 @import "./layouts/header";
 @import "./layouts/formulaire";
-@import "./layouts/footer";
 
 @import "./pages/sections-accueil";
 @import "./pages/sections-menu";
 
-@import "./utils/mixins";
+@import "./layouts/footer";
 

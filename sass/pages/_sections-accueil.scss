@@ -10,6 +10,17 @@
     text-align: center;
     background: $couleur-de-fond-primaire;
     padding: 39px 0 57px 0;
+    @include tablette-only {
+            padding: 30px 0;
+        }
+
+        h2 {
+            
+            @include tablette-only {
+                font-size: 40px;
+                margin: 0 0 18px 0;
+            }
+        }
 
         p {
             font-weight: 300;
@@ -25,8 +36,6 @@
             border: none;
             color: white;
             background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-            /*background: $degrade-bouton;*/
-            /*transition: 300ms; /*NE FONCTIONNE PAS*/
             margin: auto;
             font-weight: 500;
             font-size: 16px;
@@ -34,7 +43,6 @@
             cursor: pointer;
 
             &:hover {
-                /*background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%,(#FFFFFF) 15%);*/
                background: linear-gradient(
                     356deg,
                     rgba(155, 89, 220, 1) 0%,
@@ -43,12 +51,6 @@
                 );
                 box-shadow: 0px 2px 10px 0px #525252;
             }
-                /*background: linear-gradient(
-                    180deg,
-                    lighten (rgba(255,121,218,1), 5%) 0%,
-                    lighten (rgba(147,86,220,1), 5%) 100%,
-                );
-                lighten($degrade-bouton, 5%);*/ 
         }
     }
 
@@ -58,62 +60,93 @@
     padding: 43px 20px;
     margin-bottom: 18px;
 
-    h2 {
-        margin: 5px 0 26px 0;
+    @include tablette-only {
+        padding: 50px 20px;
     }
 
-    &__instructions {
+    @include desktop-only {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 250px;
+        justify-content: center;
+        }
 
-          
-
-            &__instruction {
-                display: flex;
-                align-items: center;
-                height: 75px;
-                background-color: $couleur-de-fond-primaire;
-                border-radius: 20px;
-                margin-left: 12px;
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-                cursor: pointer;
-
-                &:hover {
-                    i {
-                        color: $couleur-primaire;
-                    }
-
-                }
-
-                    p {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: $couleur-primaire;
-                        /*font-weight: 500;                    est-ce utile????
-                        font-size: 14px;*/
-                        color: white;
-                        width: 24px;
-                        height: 24px;
-                        border-radius: 50px;
-                        position: relative;
-                        left: -12px;
-                        
-                    }
-
-                    i {
-                        padding: 0 23px 0 34px;
-                        color: #7E7E7E;
-                    }
-
-                    
-                    h3 {                   
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
+        .bloc-fonctionnement {
+            @include desktop-only {
+                width: 80%;
             }
+        }
+
+        h2 {
+            margin: 5px 0 26px 0;
+
+            @include tablette-only {
+                margin: 0 0 25px 0;
+            }
+        }
+
+        &__instructions {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 250px;
+
+            @include tablette-only {
+                flex-direction: row;
+                height: 70px;               
+            }
+
+            
+
+                &__instruction {
+                    display: flex;
+                    align-items: center;
+                    height: 75px;
+                    background-color: $couleur-de-fond-primaire;
+                    border-radius: 20px;
+                    margin-left: 12px;
+                    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+                    cursor: pointer;
+
+                    @include tablette-only {
+                        width: 30.3%;
+                    }
+
+                    &:hover {
+                        i {
+                            color: $couleur-primaire;
+                        }
+                    }
+
+                        p {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $couleur-primaire;
+                            /*font-weight: 500;                    est-ce utile????
+                            font-size: 14px;*/
+                            color: white;
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50px;
+                            position: relative;
+                            left: -12px;
+                            
+                        }
+
+                        i {
+                            padding: 0 23px 0 34px;
+                            color: #7E7E7E;
+
+                            @include tablette-only {
+                                padding: 0 15px 0 5px;
+                            }
+                        }
+
+                        
+                        h3 {                   
+                            font-weight: 500;
+                            font-size: 16px;
+                        }
+                }
 
             }
 }
@@ -123,95 +156,112 @@
     padding: 50px 15px;
     background-color: $couleur-de-fond-primaire;
 
-    .bloc-restaurants {          
-        a {
-            text-decoration: none;
-            
-        
+    @include tablette-only {
+        padding: 30px 20px;
+    }
+
+    @include desktop-only {
+    display: flex;
+    justify-content: center;
+    }
+
+    .bloc-restaurants {
+        @include desktop-only{
+            width: 80%
+        }
         
         h2 {
             margin: 4px 0 25px 0;
-        }
+        } 
 
-        .carte {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 18px;
+        .bloc-cartes {
 
-                &__image {
-                    position: relative;
-
-                    img {
-                    width: 100%;
-                    height: 200px;
-                    border-radius: 15px 15px 0 0;
-                    object-fit: cover;
-                    vertical-align: bottom;
-                    }
-                
-                    .etiquette {
-                        background-color: $couleur-de-fond-tertiaire;
-                        color: $couleur-tertiaire;
-                        position: absolute;
-                        top: 5px;
-                        right: 12px;
-                        font-weight: 500;
-                        font-size: 14px;
-                        padding: 7px 9px 6px 9px;
-                    }
-                    }
-
-                &__contenu {
+            @include tablette-only {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;            
+            }
+                 
+            a {
+                text-decoration: none;
+                @include tablette-only {
+                    width: 48%;
+                }
+        
+        
+                .carte {
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    background-color: white;
-                    height: 77px;
-                    border-radius: 0 0 15px 15px;
-                    padding: 0 25px 0 13px;
+                    flex-direction: column;
+                    margin-bottom: 18px;
 
-                    &__texte {
+                    &__image {
+                        position: relative;
+
+                        img {
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 15px 15px 0 0;
+                        object-fit: cover;
+                        vertical-align: bottom;
+                        }
+                    
+                        .etiquette {
+                            background-color: $couleur-de-fond-tertiaire;
+                            color: $couleur-tertiaire;
+                            position: absolute;
+                            top: 5px;
+                            right: 12px;
+                            font-weight: 500;
+                            font-size: 14px;
+                            padding: 7px 9px 6px 9px;
+                            border-radius: 2px;
+                        }
+                        }
+
+                    &__contenu {
                         display: flex;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        color: black;
+                        justify-content: space-between;
+                        align-items: center;
+                        background-color: white;
+                        height: 77px;
+                        border-radius: 0 0 15px 15px;
+                        padding: 0 25px 0 13px;
 
-                        h3 {
-                            font-weight: 700;
-                            font-size: 18px;
-                            margin: 0;
+                        &__texte {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            color: black;
+
+                            h3 {
+                                font-weight: 700;
+                                font-size: 18px;
+                                margin: 0;
+                            }
+
+                            p {
+                                font-weight: 300;
+                                font-size: 17px;
+                                margin: 0;
+                            }
+
                         }
 
-                        p {
-                            font-weight: 300;
-                            font-size: 17px;
-                            margin: 0;
+                    
+                        span {
+                            background-image: url('../assets/images/coeur-vide.png');
+                            width: 23px;
+                            height: 23px;
+                            background-repeat: no-repeat;
+                            
+                            &:hover {
+                                background-image: url('../assets/images/coeur-plein.png');
+                                transform: scale(1.2);
+                            }
                         }
-
                     }
-
-                    /*i {
-                        font-size: 21px;
-                        .fa-solid {
-                            background: linear-gradient(180deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-                            color: red;                  
-                        }
-                    }*/
-                    span {
-                        background-image: url('../assets/images/coeur-vide.png');
-                        width: 23px;
-                        height: 23px;
-                        background-repeat: no-repeat;
-                        background: 1px solid;
-                        
-                        &:hover {
-                            background-image: url('../assets/images/coeur-plein.png');
-                            transform: scale(1.2);
-                        }
-                    }
-
                 }
-                }
+            }
         }
     }           
 }
