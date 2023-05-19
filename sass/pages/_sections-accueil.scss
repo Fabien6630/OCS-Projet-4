@@ -4,6 +4,7 @@
 
 }
 
+
 .section-introduction {
     display: flex;
     flex-direction: column;
@@ -55,7 +56,6 @@
     }
 
 
-
 .section-fonctionnement {
     padding: 43px 20px;
     margin-bottom: 18px;
@@ -94,7 +94,6 @@
                 height: 70px;               
             }
 
-            
 
                 &__instruction {
                     display: flex;
@@ -111,44 +110,41 @@
                     }
 
                     &:hover {
-                        i {
-                            color: $couleur-primaire;
+                            i {
+                                color: $couleur-primaire;
+                            }
+                    }
+
+                    p {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $couleur-primaire;
+                        color: white;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50px;
+                        position: relative;
+                        left: -12px;                           
+                    }
+
+                    i {
+                        padding: 0 23px 0 34px;
+                        color: #7E7E7E;
+
+                        @include tablette-only {
+                            padding: 0 15px 0 5px;
                         }
                     }
 
-                        p {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            background-color: $couleur-primaire;
-                            /*font-weight: 500;                    est-ce utile????
-                            font-size: 14px;*/
-                            color: white;
-                            width: 24px;
-                            height: 24px;
-                            border-radius: 50px;
-                            position: relative;
-                            left: -12px;
-                            
-                        }
-
-                        i {
-                            padding: 0 23px 0 34px;
-                            color: #7E7E7E;
-
-                            @include tablette-only {
-                                padding: 0 15px 0 5px;
-                            }
-                        }
-
                         
-                        h3 {                   
-                            font-weight: 500;
-                            font-size: 16px;
-                        }
+                    h3 {                   
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
                 }
 
-            }
+        }
 }
 
 
@@ -216,7 +212,7 @@
                             padding: 7px 9px 6px 9px;
                             border-radius: 2px;
                         }
-                        }
+                    }
 
                     &__contenu {
                         display: flex;

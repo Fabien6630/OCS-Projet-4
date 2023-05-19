@@ -1,3 +1,14 @@
+@keyframes translation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
+
 .bloc-menu {
     display: flex;
     flex-direction: column;
@@ -49,9 +60,7 @@
                 justify-content: center;
                 width: 70%;
                 padding-right: 0;
-            }
-
-            
+            }           
 
             h1 {
                 font-family: Shrikhand, sans-serif;
@@ -60,8 +69,7 @@
                 margin: 0;
                 @include tablette-only {
                     margin-right: 24px;
-                    }
-                               
+                    }                               
             }
 
             span {
@@ -86,26 +94,6 @@
             @include tablette-only{
                 width: 70%;                       
             }
-            
-                    
-                /*&:nth-child(1) {
-                    opacity: 0;
-                    animation: beginning 1s 0s forwards;
-
-                }
-                &:nth-child(2) {
-                    opacity: 0;
-                    animation: beginning 1s 0.5s forwards;
-                }
-                &:nth-child(3) {
-                    opacity: 0;
-                    animation: beginning 1s 1s forwards;
-                }
-                &:nth-child(4) {
-                    opacity: 0;
-                    animation: beginning 1s 1.5s forwards;
-                }*/
-
 
             h2 {
                 font-weight: 300;
@@ -129,19 +117,19 @@
 
                 &:nth-child(1) {
                     opacity: 0;
-                    animation: beginning 1s 0s forwards;
+                    animation: translation 1s 0s forwards;
                 }
                 &:nth-child(2) {
                     opacity: 0;
-                    animation: beginning 1s 0.5s forwards;
+                    animation: translation 1s 0.5s forwards;
                 }
                 &:nth-child(3) {
                     opacity: 0;
-                    animation: beginning 1s 1s forwards;
+                    animation: translation 1s 1s forwards;
                 }
                 &:nth-child(4) {
                     opacity: 0;
-                    animation: beginning 1s 1.5s forwards;
+                    animation: translation 1s 1.5s forwards;
                 }*
 
                 &:hover {
@@ -217,54 +205,17 @@
                 border-radius: 0 15px 15px 0;
                 transition: width 1s ease-in-out;
 
-                /*&:hover {
-                    /*.description {
-                        width: 70%;
-                    }
-                    
-                        width: 80px;
-                        opacity: 1;
-                    
-                }*/
 
                 i {
                     color: white;
                     font-size: 20px;
                 }
             }
-            /*&:hover {
-                    .description {
-                        width: 70%;
-                    }
-                    .selected {
-                        width: 80px;
-                        opacity: 1;
-                    }
-                }*/
+            
         }
     }
 
-        @keyframes translation {
-            from {
-                opacity: 0;
-            }
 
-            to {
-                opacity: 1;
-            }
-            
-        }
-
-        @keyframes beginning {
-            from {
-                opacity: 0;                      
-            }
-
-            to {
-                opacity: 1;               
-            }
-            
-        }
 
         .bloc-bouton {
             display: flex;
@@ -277,14 +228,12 @@
                 border: none;
                 color: white;
                 background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-                /*background: linear-gradient(($couleur-primaire) 100%, ($couleur-secondaire) 100%);*/
                 margin: auto;
                 font-weight: 500;
                 font-size: 16px;
                 cursor: pointer;
 
                 &:hover {
-                    /*background: linear-gradient(($couleur-primaire) 100%, ($couleur-secondaire) 100%, (#FFFFFF) 15%);*/
                     background: linear-gradient(
                         356deg,
                         rgba(155, 89, 220, 1) 0%,

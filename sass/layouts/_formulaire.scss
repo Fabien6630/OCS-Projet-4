@@ -5,7 +5,7 @@
     color: $couleur-quaternaire;
     background-color: $couleur-de-fond-secondaire;
     padding: 15px 0;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 10px -10px rgba(0, 0, 0, 0.5) inset;
 
     &__icone-localisation {
     margin-right: 17px; 

@@ -7,7 +7,8 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        align-items: center;            
+        align-items: center;
+        height: 115px;           
         padding: 50px 25px 25px 25px;
     }
 
@@ -16,22 +17,29 @@
         font-style: italic;
         font-weight: 400;
         font-size: 18px;
-        margin: 0;
+        margin: 0 0 18px 0;
+
+        @include tablette-only {
+            margin-bottom: 0;
+        }
 
         @include desktop-only {
             margin-right: 30px;
         }
     }
 
+    ul {
+        padding-left: 0;
+        margin: 0;
+    }
+
     &__liens {
-        display: flex;
-        flex-direction: column;
         font-weight: 500;
         font-size: 16px;
-        padding-left: 0;
-        margin-bottom: 0;
+        
 
         @include tablette-only {
+            display: flex;
             flex-direction: row;
             margin: 0;              
         }
@@ -42,8 +50,13 @@
         }
 
         .liens-partenariat {
+            
             @include tablette-only {
-                display: flex;                
+                display: flex;
+                margin-right: 30px;                
+            }
+            @include desktop-only {
+                margin-right: 50px; 
             }
         }
 
