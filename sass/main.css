@@ -196,6 +196,9 @@ header .bloc-logo a {
     width: 30.3%;
   }
 }
+.section-fonctionnement__instructions__instruction:hover {
+  background: #F5EDFF;
+}
 .section-fonctionnement__instructions__instruction:hover i {
   color: #9356DC;
 }
